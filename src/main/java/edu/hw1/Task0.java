@@ -9,7 +9,10 @@ public class Task0 {
     private - нам не нужно, чтобы этот логгер трогали другие,
     static - сколько бы объектов этого класса мы не создали, у них у всех один логгер*/
 
-    public static void write_hello_world_using_logger() { /*статик, чтобы не нужно было определять объект для вызова
+    private Task0() {
+    }
+
+    public static void writeHelloWorldUsingLogger() { /*статик, чтобы не нужно было определять объект для вызова
     метода, а можно было сразу обращаться от класса*/
 
         LOGGER.info("Hello world!");

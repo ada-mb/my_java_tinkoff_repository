@@ -8,8 +8,8 @@ import org.apache.logging.log4j.Logger;
 public final class Main {
     private final static Logger LOGGER = LogManager.getLogger();
 
-    /*private Main() {
-    }*/
+    private Main() {
+    }
 
     public static void main(String[] args) {
         LOGGER.info(Task1.minutesToSeconds("999:59"));

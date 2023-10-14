@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Task1Test {
+    private Task1Test() {
+    }
     @Test
     @DisplayName("Передача неккоректных секунд 00:599, ожидание -1")
     void Test1() {
