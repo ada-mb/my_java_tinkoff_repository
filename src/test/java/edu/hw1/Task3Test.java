@@ -10,9 +10,7 @@ public class Task3Test {
     @Test
     @DisplayName("Пример 1 из задания")
     void Test1() {
-        int[] a1 = new int[] {1, 2, 3, 4};
-        int[] a2 = new int[] {0, 6};
-        boolean result = Task3.isNestable(a1, a2);
+        boolean result = Task3.isNestable(new int[] {1, 2, 3, 4}, new int[] {0, 6});
         assertThat(result)
             .isEqualTo(true);
     }
