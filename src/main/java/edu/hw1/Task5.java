@@ -3,6 +3,23 @@ package edu.hw1;
 public class Task5 {
     private Task5() {}
 
+    public static boolean isPalindromeDescendant(int inputNumber) {
+        int number = Math.abs(inputNumber);
+        char[] charsInNumber = Integer.toString(number).toCharArray();
+
+        if (charsInNumber.length == 1) {
+            return true;
+        }
+        while (charsInNumber.length > 1) {
+            if (isPalindrome(charsInNumber)) {
+                return true;
+            } else {
+                charsInNumber = newItterationNumber(charsInNumber);
+            }
+        }
+        return false;
+    }
+
     private static boolean isPalindrome(char[] chars) {
         int lengthCharsInNumber = chars.length;
         int j = lengthCharsInNumber - 1; //для итерации по массиву с конца
@@ -27,22 +44,5 @@ public class Task5 {
             str += x;
         }
         return str.toCharArray();
-    }
-
-    public static boolean isPalindromeDescendant(int inputNumber) {
-        int number = (inputNumber >= 0) ? inputNumber : (-1) * inputNumber;
-        char[] charsInNumber = Integer.toString(number).toCharArray();
-
-        if (charsInNumber.length == 1) {
-            return true;
-        }
-        while (charsInNumber.length > 1) {
-            if (isPalindrome(charsInNumber)) {
-                return true;
-            } else {
-                charsInNumber = newItterationNumber(charsInNumber);
-            }
-        }
-        return false;
     }
 }

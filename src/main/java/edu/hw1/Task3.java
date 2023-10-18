@@ -5,6 +5,12 @@ import java.util.Objects;
 public class Task3 {
     private Task3() {}
 
+    public static boolean isNestable(int[] a1, int[] a2) {
+        Objects.requireNonNull(a1);
+        Objects.requireNonNull(a2);
+        return (minA1IsBiggerThanMinA2(a1, a2) && maxA1LessThanMaxA2(a1, a2));
+    }
+
     private static int findMin(int[] a) {
         int lengthA = a.length;
         int minA = a[0];
@@ -34,11 +40,5 @@ public class Task3 {
 
     private static boolean maxA1LessThanMaxA2(int[] a1, int[] a2) {
         return (findMax(a1) < findMax(a2));
-    }
-
-    public static boolean isNestable(int[] a1, int[] a2) {
-        Objects.requireNonNull(a1);
-        Objects.requireNonNull(a2);
-        return (minA1IsBiggerThanMinA2(a1, a2) && maxA1LessThanMaxA2(a1, a2));
     }
 }

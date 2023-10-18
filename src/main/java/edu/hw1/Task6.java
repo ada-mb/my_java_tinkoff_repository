@@ -3,10 +3,10 @@ package edu.hw1;
 import java.util.Arrays;
 
 public class Task6 {
-    private Task6() {}
-
     private static int count = 0;
     private final static int KAPREKAR_CONST = 6174;
+
+    private Task6() {}
 
     public static int countK(int n) {
         count++;
