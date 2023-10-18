@@ -1,5 +1,6 @@
 package edu.hw1;
 
+import java.util.Objects;
 
 public class Task8 {
     private static final int HORSE = 1;
@@ -9,7 +10,7 @@ public class Task8 {
     private Task8() {}
 
     public static boolean knightBoardCapture(int[][] arr) {
-
+        Objects.requireNonNull(arr);
         for (int i = 0; i < LEN; i++) {
             for (int j = 0; j < LEN; j++) {
                 if (arr[i][j] == HORSE && fight(i, j, arr)) {

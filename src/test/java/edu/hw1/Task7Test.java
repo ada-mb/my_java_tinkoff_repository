@@ -5,7 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Task7Test {
     @Test
-    void Positive() {
+    void positive() {
         assertThat(Task7.rotateRight(8, 1))
             .isEqualTo(4);
         assertThat(Task7.rotateLeft(16, 1))

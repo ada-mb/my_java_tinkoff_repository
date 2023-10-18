@@ -5,7 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Task6Test {
     @Test
-    void Positive() {
+    void positive() {
         assertThat(Task6.countK(6621))
             .isEqualTo(5);
         assertThat(Task6.countK(6554))

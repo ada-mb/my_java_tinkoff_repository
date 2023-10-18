@@ -5,7 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Task2Test {
     @Test
-    void Positive() {
+    void positive() {
         assertThat(Task2.countDigits(0))
             .isEqualTo(1);
         assertThat(Task2.countDigits(22))

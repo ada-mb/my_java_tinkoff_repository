@@ -5,7 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Task5Test {
     @Test
-    void Positive() {
+    void positive() {
         assertThat(Task5.isPalindromeDescendant(11211230))
             .isEqualTo(true);
         assertThat(Task5.isPalindromeDescendant(13001120))
